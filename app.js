@@ -1,5 +1,5 @@
+//Budget Controller
 var BudgetController = (function () {
-
     var Expense = function (id, description, value) {
         this.id = id;
         this.description = description;
@@ -44,8 +44,6 @@ var BudgetController = (function () {
             }
         }
     };
-
-
 
     var calculateTotal = function (type) {
         var sum = 0;
@@ -110,6 +108,7 @@ var BudgetController = (function () {
 
 })();
 
+//User Interface Controller
 var UIController = (function () {
     var DOMString = {
         inputType: '.add__type',
@@ -225,7 +224,8 @@ var UIController = (function () {
     }
 })();
 
-var Contreller = (function (BudgetCtrl, UICtrl) {
+//Main Controller
+var Controller = (function (BudgetCtrl, UICtrl) {
 
     var superListener = function () {
         var DOM = UICtrl.getDOMString();
@@ -279,4 +279,4 @@ var Contreller = (function (BudgetCtrl, UICtrl) {
     };
 })(BudgetController, UIController);
 
-Contreller.init();
+Controller.init();
