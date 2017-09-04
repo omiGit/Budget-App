@@ -23,7 +23,7 @@ var BudgetController = (function () {
         this.description = description;
         this.value = value;
     }
-
+// Data Structure
     var data = {
         allItems: {
             exp: [],
